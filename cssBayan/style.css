@@ -1,13 +1,73 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    background-color: blanchedalmond;
+    font-size: 1.5rem;
+    background-color: hwb(40 93% 5%);
 }
 
-*,
-*::before,
-*::after{
-    box-sizing: border-box;
+.main_container {
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+    max-width: 75%;
+    margin: 0 auto;
+}
+
+p {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 1em 0;
+}
+
+.meme-input {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.meme-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.meme-title {
+    cursor: pointer;
+}
+
+.meme-item {
+    cursor: pointer;
+    border-top: solid 0.01vh;
+    border-color: black;
+}
+
+.meme-image {
+    display: none;
+    text-align: center;
+    transition: all 0.7s;
+}
+
+.img {
+    width: 0;
+    height: 0;
+    margin: 0 auto;
+    display: block;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+
+.icon {
+    background-image: url(./assets/icon/face-grin-regular.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    transition: all 0.5s;
+}
+
+
+.meme-input:checked ~.img {
+    visibility: visible;
 }
 
