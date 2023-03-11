@@ -1,7 +1,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
-    background-color: hwb(40 93% 5%);
+    background-color:azure
 }
 
 .main-container {
@@ -9,7 +9,7 @@ body {
 	flex-direction: column;
 	flex-wrap: nowrap;
 	justify-content: flex-start;
-    max-width: 60%;
+    max-width: 75%;
     margin: 0 auto;
 }
 
@@ -17,6 +17,7 @@ h1 {
     font-size: 2em;
     font-weight: bold;
     text-align: center;
+    margin: 0;
 }
 
 .meme-title {
@@ -39,6 +40,7 @@ h1 {
 .head-text {
     font-weight: 500;
     color: blue;
+    transition: all 0.5s ease-out;
 }
 
 .img {
@@ -61,8 +63,8 @@ h1 {
 
 .meme-input:checked ~.img {
     visibility: visible;
-    width: 13rem;
-    height: 13rem;
+    width: 11rem;
+    height: 11rem;
 }
 
 .meme-input:checked ~.meme-head>.head-text {
@@ -74,7 +76,20 @@ h1 {
 }
 
 @media (min-width:820px) {
-  
+
+    body {
+        font-size: 1.5rem;
+    }
+
+    .icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .main-container {
+        max-width: 70%;
+    }
+    
     .meme-input:checked ~.img {
         width: 18rem;
         height: 18rem;
@@ -83,14 +98,21 @@ h1 {
   }
 
 @media (min-width:1024px) {
-    
-    .icon {
-       opacity: 0;
+
+    body {
+        font-size: 2rem;
     }
 
-    .meme-input:checked ~.img {
-        width: 22rem;
-        height: 22rem;
+    .head-text {
+        font-weight: 600;
+    }
+
+    .main-container {
+        max-width: 55%;
+    }
+
+    .icon {
+       opacity: 0;
     }
 
     .main-container:hover .meme-title {
@@ -100,5 +122,19 @@ h1 {
     .main-container:hover .icon {
         opacity: 1;
     }
-    
+
+    .main-container:hover .head-text {
+        color:black;
+    }
+
+    .meme-input:checked ~.img {
+        width: 22rem;
+        height: 22rem;
+    }
+
+    .meme-title:hover .img {
+        width: 22rem;
+        height: 22rem;
+        visibility: visible;
+    }
 }
