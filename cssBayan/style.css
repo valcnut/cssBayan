@@ -1,7 +1,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
-    background-color:azure
+    background-color:aliceblue
 }
 
 .main-container {
@@ -13,16 +13,20 @@ body {
     margin: 0 auto;
 }
 
-h1 {
+.meme-container {
+    display: flex;
+    flex-direction: column;
+}
+
+p {
     font-size: 2em;
     font-weight: bold;
-    text-align: center;
-    margin: 0;
+    margin: 1rem 0;
 }
 
 .meme-title {
     padding: 0 0 1rem 0;
-    border-top: 0.1rem solid #000;
+    border-top: 0.15rem solid lightgray;
 }
 
 .meme-input {
@@ -40,7 +44,7 @@ h1 {
 .head-text {
     font-weight: 500;
     color: blue;
-    transition: all 0.5s ease-out;
+    transition: ease-out 0.5s ;
 }
 
 .img {
@@ -49,16 +53,16 @@ h1 {
     margin: 0 auto;
     display: block;
     visibility: hidden;
-    transition: all 0.5s ease-out;
+    transition: ease-out 0.5s ;
 }
 
 .icon {
     background-image: url(./assets/icon/face-grin-regular.svg);
     background-repeat: no-repeat;
     display: block;
-    width: 1rem;
-    height: 1rem;
-    transition: all 0.5s ease-out;
+    width: 1.2rem;
+    height: 1.2rem;
+    transition: ease-out 0.5s ;
 }
 
 .meme-input:checked ~.img {
@@ -75,7 +79,7 @@ h1 {
     background-image: url(./assets/icon/face-dizzy-regular.svg);
 }
 
-@media (min-width:820px) {
+@media (min-width:600px) {
 
     body {
         font-size: 1.5rem;
@@ -108,22 +112,24 @@ h1 {
     }
 
     .main-container {
-        max-width: 55%;
+        max-width: 50%;
     }
 
     .icon {
        opacity: 0;
+       width: 2rem;
+       height: 2rem;
     }
 
-    .main-container:hover .meme-title {
+    .meme-container:hover .meme-title {
         cursor: pointer;
     }
     
-    .main-container:hover .icon {
+    .meme-container:hover .icon {
         opacity: 1;
     }
 
-    .main-container:hover .head-text {
+    .meme-container:hover .head-text {
         color:black;
     }
 
