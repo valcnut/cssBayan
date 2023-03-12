@@ -1,7 +1,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
-    background-color:aliceblue
+    background-color:#fff
 }
 
 .main-container {
@@ -9,7 +9,7 @@ body {
 	flex-direction: column;
 	flex-wrap: nowrap;
 	justify-content: flex-start;
-    max-width: 75%;
+    max-width: 80%;
     margin: 0 auto;
 }
 
@@ -67,7 +67,7 @@ p {
 
 .meme-input:checked ~.img {
     visibility: visible;
-    width: 11rem;
+    width: 13rem;
     height: 11rem;
 }
 
@@ -95,7 +95,7 @@ p {
     }
     
     .meme-input:checked ~.img {
-        width: 18rem;
+        width: 20rem;
         height: 18rem;
     }
   
@@ -112,7 +112,7 @@ p {
     }
 
     .main-container {
-        max-width: 50%;
+        max-width: 45%;
     }
 
     .icon {
@@ -134,13 +134,13 @@ p {
     }
 
     .meme-input:checked ~.img {
-        width: 22rem;
-        height: 22rem;
+        width: 27rem;
+        height: 23rem;
     }
 
     .meme-title:hover .img {
-        width: 22rem;
-        height: 22rem;
+        width: 27rem;
+        height: 23rem;
         visibility: visible;
     }
 }
