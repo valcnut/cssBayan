@@ -1,0 +1,155 @@
+html {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    background-color:#fff
+}
+
+.main-container {
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.meme-container {
+    display: flex;
+    flex-direction: column;
+}
+
+p {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.meme-title {
+    padding: 0 0 1rem 0;
+    border-top: 0.15rem solid lightgray;
+}
+
+.meme-input {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.meme-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head-text {
+    font-weight: 500;
+    color: blue;
+    transition: ease-out 0.5s ;
+}
+
+.img {
+    width: 0;
+    height: 0;
+    margin: 0 auto;
+    display: block;
+    visibility: hidden;
+    transition: ease-out 0.5s ;
+}
+
+.icon {
+    background-image: url(./assets/icon/face-grin-regular.svg);
+    background-repeat: no-repeat;
+    display: block;
+    width: 1.2rem;
+    height: 1.2rem;
+    transition: ease-out 0.5s ;
+}
+
+.meme-input:checked ~.img {
+    visibility: visible;
+    width: 13rem;
+    height: 11rem;
+}
+
+.meme-input:checked ~.meme-head>.head-text {
+    color:black;
+}
+
+.meme-input:checked ~.meme-head>.icon {
+    background-image: url(./assets/icon/face-dizzy-regular.svg);
+}
+
+@media (min-width:600px) {
+
+    body {
+        font-size: 1.5rem;
+    }
+
+    .icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .main-container {
+        max-width: 70%;
+    }
+    
+    .meme-input:checked ~.img {
+        width: 20rem;
+        height: 18rem;
+    }
+  
+  }
+
+@media (min-width:1024px) {
+
+    body {
+        font-size: 2rem;
+    }
+
+    .head-text {
+        font-weight: 600;
+    }
+
+    .main-container {
+        max-width: 45%;
+    }
+
+    .icon {
+       opacity: 0;
+       width: 2rem;
+       height: 2rem;
+    }
+
+    .meme-container:hover .meme-title {
+        cursor: pointer;
+    }
+    
+    .meme-container:hover .icon {
+        opacity: 1;
+    }
+
+    .meme-container:hover .head-text {
+        color:black;
+    }
+
+    .meme-title:hover .icon {
+        background-image: url(./assets/icon/face-dizzy-regular.svg);
+    }
+
+    .meme-input:checked ~.img {
+        width: 27rem;
+        height: 23rem;
+    }
+
+    .meme-title:hover .img {
+        width: 27rem;
+        height: 23rem;
+        visibility: visible;
+    }
+}
