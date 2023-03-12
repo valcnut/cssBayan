@@ -138,6 +138,10 @@ p {
         color:black;
     }
 
+    .meme-title:hover .icon {
+        background-image: url(./assets/icon/face-dizzy-regular.svg);
+    }
+
     .meme-input:checked ~.img {
         width: 27rem;
         height: 23rem;
